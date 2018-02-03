@@ -1,3 +1,8 @@
+//task2
+html {
+	font-size: 62.5%;
+}
+
 //task3 nesting elements
 .container {
 	// width: 900px;
@@ -5,7 +10,7 @@
 	color: @secondary-color;
 
 	//task2
-	font-size: @basefont * 1.6;
+	font-size: 1.6rem;
 
 	//task6
 	width: 100%;
@@ -16,50 +21,58 @@
 		height: 100px;
 		margin-bottom: 20px;
 		display: flex;
+		flex-direction: column-reverse;
 
 		//stretch goal
 		@media @phone {
-			flex-direction: column-reverse;
+			flex-flow: row nowrap;
 		}
+		
+		// @media @phone {
+		// 	width: 80%;
+		// 	flex-flow: row nowrap;
+		// 	height: 100%;
+		// }
 	
 		nav {
 			// width: 80%;
 			//stretch goal
 			width: 100%;
-			height: 100%;
-			// background: @primary-color;
+			height: 50;//100%;
+			background: @web-orange; //@primary-color;
 			margin-right: 2%;
 
 			//task1 gray into black
-			background: @black;
+			//background: @black;
 
 			//task4
 			.center-content;
 
-			//task7
-			@media @laptop {
-				background: @japanese-laurel;
-			}
-
 			//task9
 			@media @phone {
-				background: @web-orange;
+				background: @japanese-laurel;//@web-orange;
+				width: 80%;
 				//stretch goal
-				height: 50%;
+				height: 100%;//50%;
+			}
+
+			//task7
+			@media @laptop {
+				background: @primary-color;//@japanese-laurel;
 			}
 		}
 	
 		.logo {
 			width: 20%;
 			//stretch goal
-			width: 100%;
+			//width: 100%;
 			
 			height: 100%;
 
 			// background: @primary-color;
 
 			//task1 gray into black
-			background: @black;
+			background: @fresh-eggplant;//@black;
 
 			//task4
 			.center-content;
@@ -67,88 +80,98 @@
 			//task5
 			.border-radius(50%);
 
+			align-self: flex-end;
 			//task8
-			@media @tablet {
-				background: @fresh-eggplant;
-			}
+			// @media @tablet {
+			// 	background: @fresh-eggplant;
+			// }
 		}
 	}
 	
 	.content {
-		margin-top: 20px;
-		width: 100%;
+		//margin-top: 20px;
+		//width: 100%;
+
+		height: 420px;
 
 		//stretch goal fix
 		// height: 420px;
 
 		margin-bottom: 20px;
 		display: flex;
-		flex-flow: wrap;
+		flex-flow: column nowrap;//wrap;
 		justify-content: space-evenly;
+
+		@media @tablet {
+			flex-flow: wrap;
+		}
 	
 		.boxes {
-			width: 45%;
+			width: 100%;
 			height: 200px;
-			// background: @primary-color;
+			background: @web-orange;//@primary-color;
 			color: white;
 			margin-bottom: 20px;
 			display: flex;
 
 			//task1 gray into black
-			background: @black;
+			//background: @black;
 
 			//task4
 			.center-content;
 
 			//stretch goal
 			@media @tablet {
-				width: 100%;
+				width: 45%;//100%;
 			}
-			@media @phone {
-				width: 100%;
+			// @media @phone {
+			// 	width: 100%;
+			// }
+			@media @laptop {
+				background: @primary-color;
 			}
 		}
 	
 		.box1 {
 			// style this at the right time!
-			//task7
-			@media @laptop {
-				background: @japanese-laurel;
-			}
-
 			//task9
 			@media @phone {
-				background: @web-orange;
+				background: @japanese-laurel;//@web-orange;
+			}
+			//task7
+			@media @laptop {
+				background: @primary-color;//@japanese-laurel;
 			}
 		}
 	
 		.box2 {
 			// style this at the right time!
+			background: @fresh-eggplant;
 			//task8
 			@media @tablet {
-				background: @fresh-eggplant;
+				background: @primary-color;//@fresh-eggplant;
 			}
 		}
 	
 		.box3 {
 			// style this at the right time!
+			background: @fresh-eggplant;
 			//task8
 			@media @tablet {
-				background: @fresh-eggplant;
+				background: @primary-color;//@fresh-eggplant;
 			}
 		}
 	
 		.box4 {
 			// style this at the right time!
-			//task7
-			@media @laptop {
-				background: @japanese-laurel;
-			}
-
 			//task9
 			@media @phone {
-				background: @web-orange;
-				width: 100%;
+				background: @japanese-laurel;//@web-orange;
+				// width: 100%;
+			}
+			//task7
+			@media @laptop {
+				background: @primary-color;//@japanese-laurel;
 			}
 		}
 	}
@@ -156,17 +179,17 @@
 	footer {
 		width: 100%;
 		height: 50px;
-		// background: @primary-color;
+		background: @web-orange;//@primary-color;
 
 		//task1 gray into black
-		background: @black;
+		//background: @black;
 
 		//task4
 		.center-content;
 
 		//task9
 		@media @phone {
-			background: @web-orange;
+			background: @primary-color;//@web-orange;
 		}
 	}
 }

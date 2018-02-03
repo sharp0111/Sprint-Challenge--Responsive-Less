@@ -150,10 +150,13 @@ table {
   align-items: center;
   font-size: 2rem;
 }
+html {
+  font-size: 62.5%;
+}
 .container {
   margin: 0 auto;
   color: white;
-  font-size: 100%;
+  font-size: 1.6rem;
   width: 100%;
   max-width: 880px;
 }
@@ -162,38 +165,39 @@ table {
   height: 100px;
   margin-bottom: 20px;
   display: flex;
+  flex-direction: column-reverse;
 }
-@media (max-width: 400px) {
+@media (min-width: 401px) {
   .container header {
-    flex-direction: column-reverse;
+    flex-flow: row nowrap;
   }
 }
 .container header nav {
   width: 100%;
-  height: 100%;
+  height: 50;
+  background: orange;
   margin-right: 2%;
-  background: black;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 2rem;
 }
-@media (max-width: 1100px) {
+@media (min-width: 401px) {
   .container header nav {
     background: green;
+    width: 80%;
+    height: 100%;
   }
 }
-@media (max-width: 400px) {
+@media (min-width: 1101px) {
   .container header nav {
-    background: orange;
-    height: 50%;
+    background: gray;
   }
 }
 .container header .logo {
   width: 20%;
-  width: 100%;
   height: 100%;
-  background: black;
+  background: purple;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -201,83 +205,88 @@ table {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-}
-@media (max-width: 768px) {
-  .container header .logo {
-    background: purple;
-  }
+  align-self: flex-end;
 }
 .container .content {
-  margin-top: 20px;
-  width: 100%;
+  height: 420px;
   margin-bottom: 20px;
   display: flex;
-  flex-flow: wrap;
+  flex-flow: column nowrap;
   justify-content: space-evenly;
 }
+@media (min-width: 769px) {
+  .container .content {
+    flex-flow: wrap;
+  }
+}
 .container .content .boxes {
-  width: 45%;
+  width: 100%;
   height: 200px;
+  background: orange;
   color: white;
   margin-bottom: 20px;
-  background: black;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 2rem;
 }
-@media (max-width: 768px) {
+@media (min-width: 769px) {
   .container .content .boxes {
-    width: 100%;
+    width: 45%;
   }
 }
-@media (max-width: 400px) {
+@media (min-width: 1101px) {
   .container .content .boxes {
-    width: 100%;
+    background: gray;
   }
 }
-@media (max-width: 1100px) {
+@media (min-width: 401px) {
   .container .content .box1 {
     background: green;
   }
 }
-@media (max-width: 400px) {
+@media (min-width: 1101px) {
   .container .content .box1 {
-    background: orange;
+    background: gray;
   }
 }
-@media (max-width: 768px) {
+.container .content .box2 {
+  background: purple;
+}
+@media (min-width: 769px) {
   .container .content .box2 {
-    background: purple;
+    background: gray;
   }
 }
-@media (max-width: 768px) {
+.container .content .box3 {
+  background: purple;
+}
+@media (min-width: 769px) {
   .container .content .box3 {
-    background: purple;
+    background: gray;
   }
 }
-@media (max-width: 1100px) {
+@media (min-width: 401px) {
   .container .content .box4 {
     background: green;
   }
 }
-@media (max-width: 400px) {
+@media (min-width: 1101px) {
   .container .content .box4 {
-    background: orange;
-    width: 100%;
+    background: gray;
   }
 }
 .container footer {
   width: 100%;
   height: 50px;
-  background: black;
+  background: orange;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 2rem;
 }
-@media (max-width: 400px) {
+@media (min-width: 401px) {
   .container footer {
-    background: orange;
+    background: gray;
   }
 }
